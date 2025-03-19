@@ -1,0 +1,1 @@
+result.append(node.key)
