@@ -2,7 +2,6 @@
 #Min Heap
 from turtle import right
 
-
 def insert(heap,value):
     heap.append(value)
     current_index=len(heap)-1
