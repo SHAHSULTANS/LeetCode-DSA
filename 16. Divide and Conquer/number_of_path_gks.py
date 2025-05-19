@@ -4,15 +4,31 @@
 class Solution:
     def numberOfPaths(self, m, n):
         memo=[[-1]*n for _ in range(m)]
-        total=0
-        for i in range(m):
-            for j in range(n):
-                if i==0 or j==0:
-                    memo[i][j]=1
-                else:
-                    memo[i][j]=memo[i][j-1]+memo[i-1][j]
+        # print(memo[0][0])
+        # total=0
+        
+        def recursion(i,j):
+            if memo[i][j]!=-1:
+                return memo[i][j]
+            
+            if i<0 or j<0:
+                return 0
+            if i==0 or j==0:
+                memo[i][j]=1
+                return memo[i][j]
+
+            memo[i][j]=recursion(i,j-1)+recursion(i-1,j)
+            return memo[i][j]
+        
+        return recursion(m-1,n-1)
+        # for i in range(m):
+        #     for j in range(n):
+        #         if i==0 or j==0:
+        #             memo[i][j]=1
+        #         else:
+        #             memo[i][j]=memo[i][j-1]+memo[i-1][j]
                     
-        return memo[m-1][n-1]
+        # return memo[m-1][n-1]
 
 
 
