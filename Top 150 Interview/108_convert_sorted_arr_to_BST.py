@@ -1,5 +1,3 @@
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -8,28 +6,15 @@
 #         self.right = right
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
-        n=len(nums)
-        root_postion=n//2
-        root=TreeNode(nums[root_postion])
         
-        current=root.left
-        ctn=root_postion-1
-        while ctn>=0:
-            current=TreeNode(nums[ctn])
-            current=current.left
-            ctn-=1
+        def fun(start,end,nums):
+            if start>end:
+                return None
             
-        ctn=root_postion+1
-        current=root.right
-        
-        while ctn<n:
-            current=TreeNode(nums[ctn])
-            current=current.right
-            ctn+=1
-            
-        return root
-            
-        
-        
-        
-        
+            mid=(start+end)//2
+
+            root=TreeNode(nums[mid])
+            root.left=fun(start,mid-1,nums)
+            root.right=fun(mid+1,end,nums)
+            return root
+        return fun(0,len(nums)-1,nums)
