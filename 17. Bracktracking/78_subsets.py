@@ -15,5 +15,22 @@ class Solution:
 
         dfs(0)
         return ans
+    
+    
+    
+    
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        ans=[]
+        
+        for powerset_range in range(0,pow(2,len(nums))):
+            subset=[]
+            for i in range(powerset_range):
+                if (powerset_range &(1<<i)):
+                    subset.append(nums[i])
+                    
+            ans.append(subset)
+            
+        return ans
 
                 

@@ -16,3 +16,20 @@ class Solution:
 
         dfs(0)
         return [key for key in hash_map]
+    
+
+
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        hash_map={}
+        for powerset_range in range(0,pow(2,len(nums))):
+            subset=[]
+            for i in range(powerset_range):
+                if (powerset_range &(1<<i)):
+                    subset.append(nums[i])
+                    
+            hash_map[tuple(subset)]=1
+            
+        # return ans
+        return [key for key in hash_map]
