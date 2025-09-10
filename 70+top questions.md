@@ -2,19 +2,19 @@
 
 ## 🟢 Arrays & Strings
 
-1. Find the largest element in an array.
-2. Find the second largest element in an array.
+1. Find the largest element in an array. (done)
+2. Find the second largest element in an array.(done)
 3. Reverse an array in place.
-4. Rotate an array by k steps.
+4. Rotate an array by k steps.(done)
 5. Find the missing number in an array (1 to n).
-6. Find the duplicate number in an array.
+6. Find the duplicate number in an array.(done)
 7. Find the majority element (appears more than n/2 times).
 8. Kadane’s Algorithm – Maximum subarray sum.
 9. Merge two sorted arrays.
 10. Find the intersection of two arrays.
 11. Move all zeros to the end of an array.
 12. Maximum product subarray.
-13. Check if a string is palindrome.
+13. Check if a string is palindrome.(done)
 14. Find the first non-repeating character in a string.
 15. Longest substring without repeating characters.
 16. Longest palindromic substring.
@@ -29,8 +29,8 @@
 
 ## 🟢 Searching & Sorting
 
-23. Implement Binary Search (iterative & recursive).
-24. Find the first and last occurrence of an element in a sorted array.
+23. Implement Binary Search (iterative & recursive).(done)
+24. Find the first and last occurrence of an element in a sorted array.(done)
 25. Count number of occurrences of an element.
 26. Search in a rotated sorted array.
 27. Find the peak element in an array.
@@ -44,7 +44,7 @@
 
 ## 🟢 Linked List
 
-33. Reverse a linked list.
+33. Reverse a linked list.(done)
 34. Detect cycle in a linked list (Floyd’s Cycle Detection).
 35. Find the starting node of a cycle.
 36. Merge two sorted linked lists.
