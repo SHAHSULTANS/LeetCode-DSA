@@ -40,3 +40,39 @@ class LRUCache:
 # o=OrderedDict()
 # o[1]=0
 # print(o[1])
+
+
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        self.capacity=capacity
+        self.dictionary=OrderedDict()
+        
+
+    def get(self, key: int) -> int:
+        # print(self.dictionary," ",key," ",self.dictionary.get(key))
+        
+        if key in self.dictionary:
+            value=self.dictionary[key]
+            del self.dictionary[key]
+            self.dictionary[key]=value
+            return value
+            # pass
+        else:
+            # print(key)
+            return -1
+        
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.dictionary:
+
+            del self.dictionary[key]
+            self.dictionary[key]=value
+        else:
+            if self.capacity>=1:
+                self.dictionary[key]=value
+                self.capacity-=1
+            else:
+                self.dictionary.popitem(last=False)
+                self.dictionary[key]=value
+        # print(self.dictionary)
